@@ -8,11 +8,12 @@ version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven { url 'https://dl.bintray.com/qameta/maven' }  // Додаємо репозиторій для Allure
 }
 
 dependencies {
-    implementation("io.qameta.allure:allure-junit5:2.21.0")
-    implementation("io.qameta.allure:allure-rest-assured:2.21.0")
+    implementation "io.qameta.allure:allure-junit5:2.21.0"
+    implementation "io.qameta.allure:allure-rest-assured:2.21.0"
 
     implementation platform('org.junit:junit-bom:5.9.1')
     implementation 'org.junit.jupiter:junit-jupiter'
@@ -20,7 +21,6 @@ dependencies {
     implementation 'org.projectlombok:lombok:1.18.26'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2' // або останню версію
-
 }
 
 allure {
