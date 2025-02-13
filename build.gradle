@@ -24,4 +24,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    testLogging {
+        events 'passed', 'failed', 'skipped'  // Логи про пройдені, не пройдені і пропущені тести
+        exceptionFormat 'full'  // Показати повні стектрейси помилок
+    }
 }
