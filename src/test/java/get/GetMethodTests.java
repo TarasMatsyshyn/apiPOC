@@ -28,7 +28,7 @@ public class GetMethodTests extends BaseTest {
 
         // Логування результатів
         users.forEach(x -> Assertions.assertTrue(x.getAvatar().contains(x.getId().toString())));
-        Assertions.assertTrue(users.stream().allMatch(x -> x.getEmail().endsWith("@reqres.in@@@@@@@@@@@@@")));
+        Assertions.assertTrue(users.stream().allMatch(x -> x.getEmail().endsWith("@reqres.in")));
 
         List<String> avatars = users.stream().map(UserData::getAvatar).collect(Collectors.toList());
         List<String> ids = users.stream().map(x -> x.getId().toString()).collect(Collectors.toList());
