@@ -9,6 +9,7 @@ version = '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
     maven { url 'https://dl.bintray.com/qameta/maven' }  // Додаємо репозиторій для Allure
+    gradlePluginPortal()  // Це дозволяє знайти плагіни через портал Gradle
 }
 
 dependencies {
